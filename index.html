@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Услуги по переводу бизнеса в кооперативное управление в Москве. Законная налоговая оптимизация, защита активов от субсидиарной ответственности." />
+  <meta name="keywords" content="кооперативное управление, производственный кооператив, консалтинг москва, перевод бизнеса, защита активов, налоговая оптимизация" />
+  <title>Кооперативное Управление — Перевод бизнеса в производственный кооператив</title>
+  
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+  
+  <!-- Шрифты: Cormorant Garamond для заголовков (премиальность) и Manrope для текста -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- КИНЕМАТОГРАФИЧНЫЙ ФОН -->
+  <canvas id="gl-canvas"></canvas>
+  <div class="grain-overlay"></div>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+    </div>
+  </div>
+
+  <!-- НАВИГАЦИЯ (Floating Pill) -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="images/logo.png" alt="COOP CONSULT" style="height: 36px; mix-blend-mode: screen;">
+      </div>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link active">Главная</a>
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#benefits" class="nav-link">Преимущества</a>
+        <a href="#process" class="nav-link">Процесс</a>
+        <a href="#about" class="nav-link">О нас</a>
+      </div>
+      <div class="nav-actions">
+        <a href="#contacts" class="btn btn-outline btn-sm">Связаться</a>
+      </div>
+      <button class="menu-btn" id="menu-btn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- МОБИЛЬНОЕ МЕНЮ -->
+  <div class="nav-drawer" id="nav-drawer">
+    <div class="drawer-content">
+      <a href="#hero" class="drawer-link">Главная</a>
+      <a href="#services" class="drawer-link">Услуги</a>
+      <a href="#benefits" class="drawer-link">Преимущества</a>
+      <a href="#process" class="drawer-link">Процесс</a>
+      <a href="#about" class="drawer-link">О нас</a>
+      <a href="#contacts" class="btn btn-primary">Оставить заявку</a>
+    </div>
+  </div>
+
+  <!-- ГЛАВНЫЙ КОНТЕЙНЕР ДЛЯ СКРОЛЛА -->
+  <div id="ui-layer">
+    <div class="stage">
+      
+      <!-- СЕКЦИЯ 0: HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="container hero-content">
+          <div class="reveal-3d">
+            <span class="badge">Бизнес-консалтинг в Москве</span>
+          </div>
+          <h1 class="hero-title reveal-3d">Переход в <span class="accent-text">кооперативное</span> управление</h1>
+          <p class="hero-subtitle reveal-3d">Законная налоговая оптимизация, надежная защита активов от рейдерства и вовлечение команды в результаты бизнеса.</p>
+          <div class="hero-buttons reveal-3d">
+            <a href="#contacts" class="btn btn-primary">Получить консультацию</a>
+            <a href="#services" class="btn btn-outline">Узнать больше</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 1: УСЛУГИ -->
+      <section class="page" data-index="1" id="services">
+        <div class="container">
+          <h2 class="section-title reveal-3d">Наши <span class="accent-text">Услуги</span></h2>
+          <div class="grid cards-grid">
+            <div class="card card-glass reveal-3d">
+              <div class="card-icon">1</div>
+              <h3>Правовой аудит</h3>
+              <p>Анализ текущей бизнес-модели, оценка рисков и целесообразности перевода в производственный кооператив.</p>
+            </div>
+            <div class="card card-glass reveal-3d">
+              <div class="card-icon">2</div>
+              <h3>Разработка Устава</h3>
+              <p>Создание уникального Устава ПК, закрепляющего принципы трудового участия и защиты неделимого фонда.</p>
+            </div>
+            <div class="card card-glass reveal-3d">
+              <div class="card-icon">3</div>
+              <h3>Реорганизация</h3>
+              <p>Полное юридическое сопровождение перевода сотрудников и активов в новую кооперативную структуру.</p>
+            </div>
+            <div class="card card-glass reveal-3d">
+              <div class="card-icon">4</div>
+              <h3>Защита интересов</h3>
+              <p>Представление интересов перед ФНС, обоснование деловой цели и защита от субсидиарной ответственности.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 2: ПРЕИМУЩЕСТВА -->
+      <section class="page" data-index="2" id="benefits">
+        <div class="container">
+          <h2 class="section-title reveal-3d">Почему <span class="accent-text">Кооператив?</span></h2>
+          <div class="benefits-wrapper reveal-3d">
+            <div class="benefit-item">
+              <h4>🛡️ Защита активов</h4>
+              <p>Имущество, переданное в неделимый фонд кооператива, защищено от взыскания по личным долгам пайщиков.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>📉 Налоговая оптимизация</h4>
+              <p>Законное снижение налоговой нагрузки за счет выплат прибыли пропорционально трудовому участию.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>🤝 Вовлеченность</h4>
+              <p>Сотрудники становятся совладельцами бизнеса, что радикально повышает их мотивацию и лояльность.</p>
+            </div>
+            <div class="benefit-item">
+              <h4>🏛️ Демократичность</h4>
+              <p>Один пайщик — один голос, независимо от размера пая. Справедливая и прозрачная структура управления.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 3: ПРОЦЕСС -->
+      <section class="page" data-index="3" id="process">
+        <div class="container">
+          <h2 class="section-title reveal-3d">Этапы <span class="accent-text">перехода</span></h2>
+          <div class="timeline reveal-3d">
+            <div class="timeline-item">
+              <div class="timeline-dot">01</div>
+              <div class="timeline-content">
+                <h3>Консультация и аудит</h3>
+                <p>Оцениваем текущую структуру вашего ООО/ИП и рассчитываем финансовую выгоду от перехода.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">02</div>
+              <div class="timeline-content">
+                <h3>Моделирование</h3>
+                <p>Разрабатываем архитектуру будущего ПК, структуру фондов и систему трудового участия.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">03</div>
+              <div class="timeline-content">
+                <h3>Регистрация</h3>
+                <p>Готовим все документы, проводим общее собрание и регистрируем изменения в ЕГРЮЛ.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot">04</div>
+              <div class="timeline-content">
+                <h3>Внедрение</h3>
+                <p>Помогаем выстроить новые бизнес-процессы, систему выплат и документооборот.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 4: О НАС -->
+      <section class="page" data-index="4" id="about">
+        <div class="container about-content">
+          <div class="about-text reveal-3d">
+            <h2 class="section-title">О <span class="accent-text">Компании</span></h2>
+            <p class="large-text">Мы — команда бизнес-архитекторов и стратегов в Москве, специализирующихся на проектировании сложных и устойчивых форм корпоративного управления.</p>
+            <p>В отличие от обычных юристов-регистраторов, мы не просто открываем производственные кооперативы. Мы выстраиваем архитектуру вашего бизнеса так, чтобы защитить капитал от современных рисков (рейдерство, субсидиарная ответственность), легально оптимизировать налоги и создать синергию внутри вашей команды.</p>
+            <div class="stats">
+              <div class="stat-item">
+                <span class="stat-num">12+</span>
+                <span class="stat-desc">Лет практики</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">45</span>
+                <span class="stat-desc">Успешных ПК</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">100%</span>
+                <span class="stat-desc">Защита активов</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- СЕКЦИЯ 5: КОНТАКТЫ -->
+      <section class="page" data-index="5" id="contacts">
+        <div class="container contacts-wrapper">
+          <div class="contacts-info reveal-3d">
+            <h2 class="section-title">Готовы к <span class="accent-text">переменам?</span></h2>
+            <p>Оставьте заявку на первичный аудит вашего бизнеса. Мы конфиденциально обсудим ваши задачи и предложим оптимальный путь.</p>
+            <ul class="contact-list">
+              <li>📞 +7 (495) 000-00-00</li>
+              <li>✉️ info@coop-consult.ru</li>
+              <li>🏢 г. Москва, Пресненская наб., 12 (Москва-Сити)</li>
+            </ul>
+          </div>
+          <div class="contacts-form reveal-3d">
+            <form id="lead-form" class="card-glass form-card">
+              <div class="form-group">
+                <label for="name">Ваше имя</label>
+                <input type="text" id="name" placeholder="Иван Иванов" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Обсудить проект</button>
+              <p class="form-note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
